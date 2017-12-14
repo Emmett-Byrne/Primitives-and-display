@@ -118,6 +118,9 @@ void Game::update()
 
 		//investigating glscalef
 		//glScalef(1.0f, 1.0f, 1.0f);
+
+		//reset all the things!
+		//glLoadIdentity();
 	}
 
 
@@ -130,24 +133,86 @@ void Game::draw()
 {
 	cout << "Draw up" << endl;
 
-	/*glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
-	glBegin(GL_QUADS);{
-		glVertex3f(-1.0, 1.0, -20.0); 
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glBegin(GL_QUADS); {
+		glVertex3f(-1.0, 1.0, -20.0);
 		glVertex3f(-1.0, -1.0, -20.0);
 		glVertex3f(1.0, -1.0, -30.0);
 		glVertex3f(1.0, 1.0, -30.0); }
-	glEnd(); */
+	glEnd();
+
+	glBegin(GL_POINTS); {
+		glVertex3f(-2.0, 1.0, -20.0);
+		glVertex3f(-2.0, -1.0, -20.0); }
+	glEnd();
+
+	glBegin(GL_LINES); {
+		glVertex3f(-3.0, 1.0, -20.0);
+		glVertex3f(-3.0, -1.0, -20.0);
+		glVertex3f(-4.0, -2.0, -20.0);
+		glVertex3f(-4.0, 2.0, -20.0); }
+	glEnd();
+
+	glBegin(GL_LINE_STRIP); {
+		glVertex3f(3.0, 1.0, -20.0);
+		glVertex3f(3.0, -1.0, -20.0);
+		glVertex3f(4.0, -2.0, -20.0);
+		glVertex3f(4.0, 2.0, -20.0); }
+	glEnd();
+
+	glBegin(GL_LINE_LOOP); {
+		glVertex3f(5.0, 1.0, -20.0);
+		glVertex3f(5.0, -1.0, -20.0);
+		glVertex3f(6.0, -2.0, -20.0);
+		glVertex3f(6.0, 2.0, -20.0); }
+	glEnd();
+
+	glBegin(GL_TRIANGLES); {
+		glVertex3f(-1.0, 3.0, -20.0);
+		glVertex3f(-1.0, 2.0, -20.0);
+		glVertex3f(1.0, 2.0, -30.0); }
+	glEnd();
+
+	glBegin(GL_TRIANGLE_STRIP); {
+		glVertex3f(-1.0, 5.0, -20.0);
+		glVertex3f(-1.0, 4.0, -20.0);
+		glVertex3f(1.0, 4.0, -30.0); }
+	glEnd();
+
+	glBegin(GL_TRIANGLE_FAN); {
+		glVertex3f(-1.0, -3.0, -20.0);
+		glVertex3f(-1.0, -2.0, -20.0);
+		glVertex3f(1.0, -2.0, -30.0); }
+	glEnd();
+
+	glBegin(GL_QUAD_STRIP); {
+		glVertex3f(-1.0, -5.0, -20.0);
+		glVertex3f(-1.0, -4.0, -20.0);
+		glVertex3f(1.0, -5.0, -30.0);
+		glVertex3f(1.0, -4.0, -30.0); }
+	glEnd();
+
+
+
+	glBegin(GL_POLYGON); {
+		glVertex3f(3.0, 5.0, -20.0);
+		glVertex3f(2.0, 5.0, -20.0);
+		glVertex3f(2.0, 4.0, -30.0);
+		glVertex3f(3.0, 3.5, -30.0);
+		glVertex3f(4.0, 4.0, -30.0); }
+	glEnd();
+
 
 	 // Uncomment for Part 2
 	 // ********************
-	cout << "Draw up" << endl;
+	//cout << "Draw up" << endl;
 
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	//Investigate Here!!!!!
+	////Investigate Here!!!!!
 
-	cout << "Drawing Primative " << current << endl;
-	glCallList(current);
+	//cout << "Drawing Primative " << current << endl;
+	//glCallList(current);
 	 // Uncomment for Part 2
 	 // ********************
 
